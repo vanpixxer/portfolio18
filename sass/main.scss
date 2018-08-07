@@ -1,0 +1,121 @@
+/* Variables */
+$color-very-dark-grey: #2a3433;
+$color-dark-sage: #63796d;
+$color-sea-green: #7fb8a5;
+$color-mid-blue-green: #8cccbc;
+$color-light-ash: #e9e8e4;
+$color-light-mint: #d4ecb5;
+$color-canary-yellow: #f3d915;
+
+// BOX SHADOW
+$box-shadow: 0 1.5rem 3rem rgba($color-very-dark-grey, .4);
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-very-dark-grey;
+}
+
+// NAVIGATION
+ nav {
+  position: fixed;
+  z-index: 100;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: $color-dark-sage;
+
+  .nav__align-center {
+    align-items: center;
+  }
+
+  .logo {
+    width: 11rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .nav__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 120rem;
+    box-sizing: border-box;
+  }
+    ul {
+     margin: 0;
+     display: flex;
+     padding: 0;
+     list-style-type: none;
+   }
+  .nav__menu li a {
+    display: block;
+    color: $color-light-ash;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    pointer: cursor;
+
+    &:hover {
+      content: ' ';
+      display: block;
+      color: $color-light-mint;
+      font-size: 1.6rem;
+    }
+
+    li:last-child a {
+      padding-right: 0;
+    }
+  }
+
+}
+
+
+
+// HEADER
+.header {
+  height: 100vh;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+}
+.title__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.heading__primary {
+  display: block;
+  color: $color-light-ash;
+  font-size: 28px;
+  letter-spacing: 7px;
+  background-color: rgba($color-very-dark-grey, .6);
+  padding: 25px;
+  animation: enterFromLeft 2s ease-in-out;
+  backface-visibility: hidden;
+}
+@keyframes enterFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  80% {
+     transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

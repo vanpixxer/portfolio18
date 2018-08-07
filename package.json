@@ -1,0 +1,32 @@
+{
+  "name": "portfolio18",
+  "version": "1.0.0",
+  "description": "New portfolio site for Darrell Chaddock",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanpixxer/portfolio18.git"
+  },
+  "keywords": [
+    "web_development",
+    "Sass",
+    "node.js",
+    "photography",
+    "graphic_art"
+  ],
+  "author": "Darrell Chaddock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanpixxer/portfolio18/issues"
+  },
+  "homepage": "https://github.com/vanpixxer/portfolio18#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
+  }
+}
