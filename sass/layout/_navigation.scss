@@ -1,0 +1,53 @@
+//NAVIGATION
+ nav {
+  position: fixed;
+  z-index: 100;
+  padding: 1rem 0;
+  width: 100%;
+  background-color: rgba($color-dark-sage, .95);
+
+  .nav__align-center {
+    align-items: center;
+  }
+
+  .logo {
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .nav__container {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 120rem;
+    box-sizing: border-box;
+  }
+    ul {
+     margin: 0;
+     display: flex;
+     padding: 0;
+     list-style-type: none;
+   }
+  .nav__menu li a {
+    display: block;
+    color: $color-light-ash;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    pointer: cursor;
+
+    &:hover {
+      content: ' ';
+      display: block;
+      color: $color-light-mint;
+      font-size: 1.6rem;
+    }
+
+    li:last-child a {
+      padding-right: 0;
+    }
+  }
+
+}

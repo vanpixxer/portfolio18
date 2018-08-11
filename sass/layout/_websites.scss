@@ -1,0 +1,206 @@
+.websites{
+  margin: 4rem;
+  .websites__title {
+    border-bottom: .2rem solid $color-dark-sage;
+    font-size: 1.75rem;
+    color: $color-light-ash;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    span {
+      background-color: $color-dark-sage;
+      padding: .5rem 1rem;
+      display: inline-block;
+    }
+  }
+}
+
+// functionality
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  margin: 5rem 0;
+  &__side {
+    height: 50rem;
+    width: 28rem;
+    transition: all .7s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    box-shadow: $box-shadow;
+    &--front {
+      background-color: $color-light-ash;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green);
+      }
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-mid-blue-green, $color-canary-yellow);
+      }
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-very-dark-brown, $color-light-mint);
+      }
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back{
+    transform: rotateY(0);
+  }
+  // CARD:   FRONT:   STYLING;
+  &__picture {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+
+     &--1 {
+       background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green), url(../img/buddhas.jpg);
+     }
+
+     &--2 {
+       background-image: linear-gradient(to right bottom, $color-mid-blue-green, $color-canary-yellow), url(../img/rome.jpg);
+     }
+
+     &--3 {
+       background-image: linear-gradient(to right bottom, $color-very-dark-grey, $color-sea-green), url(../img/neon.jpg);
+     }
+   }
+   &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: right;
+    position: absolute;
+    top: 11rem;
+    right: 2rem;
+    color: $color-light-ash;
+     background-color: rgba($color-very-dark-grey, .7);
+   }
+   &__heading-span {
+     padding: 1rem 1.5rem;
+
+     &--1 {
+        background-image: linear-gradient(to right bottom,
+        rgba($color-dark-sage, .8),
+        rgba($color-mid-blue-green, .8));
+     }
+     &--2 {
+        background-image: linear-gradient(to right bottom,
+        rgba($color-mid-blue-green, .8),
+        rgba($color-canary-yellow, .8));
+     }
+     &--3 {
+        background-image: linear-gradient(to right bottom,
+        rgba($color-very-dark-brown, .8),
+        rgba($color-light-mint, .8));
+     }
+   }
+    &__details {
+      padding: 4rem;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      }
+      &__logo {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &__logo-box{
+        background-image: url(../img/logos/rc_logo.gif);
+        background-blend-mode: color;
+        z-index: 90;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+    .card--2 {
+      perspective: 150rem;
+      -moz-perspective: 150rem;
+      position: relative;
+      height: 50rem;
+      &__side--2 {
+        height: 50rem;
+        width: 28rem;
+        transition: all .7s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        box-shadow: $box-shadow;
+        &--front--2{
+          background-color: $color-light-ash;
+        }
+        &--back--2 {
+          transform: rotateY(180deg);
+          &-2 {
+            background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green), url(../img/logos/deco-logo.gif);
+            background-repeat: no-repeat;
+            background-blend-mode: color;
+          }
+        }
+      }
+      &:hover &__side--front--2 {
+        transform: rotateY(-180deg);
+      }
+      &:hover &__side--back--2 {
+        transform: rotateY(0);
+      }
+      // CARD:   FRONT:   STYLING;
+      &__picture--2 {
+        background-size: cover;
+        height: 20rem;
+        background-blend-mode: color;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+
+         &--2 {
+           background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green), url(../img/rome.jpg);
+         }
+
+         &--2 {
+           background-image: url(../img/rome.jpg);
+         }
+
+         &--3 {
+           background-image: url(../img/neon.jpg);
+         }
+       }
+       &__heading--2 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        top: 11rem;
+        right: 2rem;
+        color: $color-light-ash;
+         background-color: rgba($color-very-dark-grey, .6);
+         padding: .75rem 1.5rem;
+       }
+       &__heading-span--2 {
+         padding: 1rem 1.5rem;
+         &-2 {
+         }
+       }
+        &__details--2 {
+          padding: 5rem;
+          font-size: 1.2rem;
+          margin: 0 auto;
+          }
+        }

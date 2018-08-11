@@ -1,0 +1,16 @@
+// ABOUT
+.about{
+  font-size: 1.6rem;
+  margin: 4rem;
+  .about__title {
+    border-bottom: .2rem solid $color-mid-blue-green;
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    span {
+      background-color: $color-mid-blue-green;
+      padding: .5rem 1rem;
+      display: inline-block;
+    }
+  }
+}
