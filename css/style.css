@@ -194,7 +194,7 @@ nav {
       transform: rotateY(180deg); }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #63796d, #8cccbc); }
-      .card__side--back-2 {
+      .card__side--back--2 {
         background-image: linear-gradient(to right bottom, #8cccbc, #f3d915); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #544545, #d4ecb5); }
@@ -221,36 +221,39 @@ nav {
     position: absolute;
     top: 11rem;
     right: 2rem;
-    color: #e9e8e4;
-    background-color: rgba(42, 52, 51, 0.7); }
+    color: #e9e8e4; }
   .card__heading-span {
     padding: 1rem 1.5rem; }
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(99, 121, 109, 0.8), rgba(140, 204, 188, 0.8)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(140, 204, 188, 0.8), rgba(243, 217, 21, 0.8)); }
+      background-image: linear-gradient(to right bottom, rgba(84, 69, 69, 0.8), rgba(243, 217, 21, 0.8)); }
     .card__heading-span--3 {
-      background-image: linear-gradient(to right bottom, rgba(84, 69, 69, 0.8), rgba(212, 236, 181, 0.8)); }
+      background-image: linear-gradient(to right bottom, rgba(42, 52, 51, 0.8), rgba(140, 204, 188, 0.8)); }
   .card__details {
     padding: 4rem;
     font-size: 1.2rem;
     margin: 0 auto; }
-  .card__logo {
+  .card__site-name-holder {
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .card__logo-box {
-    background-image: url(../img/logos/rc_logo.gif);
-    background-blend-mode: color;
-    z-index: 90; }
+  .card__name-box {
+    text-align: center;
+    color: #e9e8e4;
+    margin-bottom: 15rem;
+    z-index: 15;
+    opacity: .6; }
+  .card__site-name {
+    font-size: 1.5rem; }
 
-.card--2 {
+.card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem; }
-  .card--2__side--2 {
+  .card__side--2 {
     height: 50rem;
     width: 28rem;
     transition: all .7s ease;
@@ -259,31 +262,31 @@ nav {
     left: 0;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 3rem rgba(42, 52, 51, 0.4); }
-    .card--2__side--2--front--2 {
+    .card__side--2--front--2 {
       background-color: #e9e8e4; }
-    .card--2__side--2--back--2 {
+    .card__side--2--back--2 {
       transform: rotateY(180deg); }
-      .card--2__side--2--back--2-2 {
+      .card__side--2--back--2-2 {
         background-image: linear-gradient(to right bottom, #63796d, #8cccbc), url(../img/logos/deco-logo.gif);
         background-repeat: no-repeat;
         background-blend-mode: color; }
-  .card--2:hover .card--2__side--front--2 {
+  .card:hover .card__side--front--2 {
     transform: rotateY(-180deg); }
-  .card--2:hover .card--2__side--back--2 {
+  .card:hover .card__side--back--2 {
     transform: rotateY(0); }
-  .card--2__picture--2 {
+  .card__picture--2 {
     background-size: cover;
     height: 20rem;
     background-blend-mode: color;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-    .card--2__picture--2--2 {
+    .card__picture--2--1 {
       background-image: linear-gradient(to right bottom, #63796d, #8cccbc), url(../img/rome.jpg); }
-    .card--2__picture--2--2 {
+    .card__picture--2--2 {
       background-image: url(../img/rome.jpg); }
-    .card--2__picture--2--3 {
+    .card__picture--2--3 {
       background-image: url(../img/neon.jpg); }
-  .card--2__heading--2 {
+  .card__heading--2 {
     font-size: 2rem;
     text-transform: uppercase;
     text-align: right;
@@ -293,9 +296,9 @@ nav {
     color: #e9e8e4;
     background-color: rgba(42, 52, 51, 0.6);
     padding: .75rem 1.5rem; }
-  .card--2__heading-span--2 {
+  .card__heading-span--2 {
     padding: 1rem 1.5rem; }
-  .card--2__details--2 {
+  .card__details--2 {
     padding: 5rem;
     font-size: 1.2rem;
     margin: 0 auto; }
@@ -342,6 +345,88 @@ nav {
 
 .photo__gallery--img li:hover img {
   transform: scale(1.2); }
+
+.contact {
+  margin: 4rem; }
+  .contact .contact__title {
+    border-bottom: 0.2rem solid #f3d915;
+    font-size: 1.75rem;
+    color: #544545;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+    .contact .contact__title span {
+      background-color: #f3d915;
+      padding: .5rem 1rem;
+      display: inline-block; }
+
+.message {
+  background-image: linear-gradient(105deg, rgba(233, 232, 228, 0.95) 0%, rgba(233, 232, 228, 0.95) 60%, transparent 60%), url(../img/tiles/sage-tiles.jpg);
+  background-repeat: no-repeat;
+  background-size: 90%;
+  height: 50rem; }
+
+.form {
+  font-family: inherit;
+  width: 70%;
+  padding: 5rem; }
+  .form__input {
+    display: block;
+    font-size: 1rem;
+    color: inherit;
+    padding: .8rem 1rem;
+    border: none;
+    margin: 2rem 0 0 2rem;
+    border-bottom: .2rem solid transparent;
+    width: 60%;
+    transition: all .5s ease-in-out; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1.5rem 3rem rgba(42, 52, 51, 0.4);
+      border-bottom: 0.3rem solid #d4ecb5; }
+    .form__input:focus:invalid {
+      border-bottom: .2rem solid red; }
+    .form__input::-webkit-input-placeholder {
+      color: #2a3433; }
+  .form__label {
+    font-size: 1rem;
+    margin-left: 3rem;
+    display: block;
+    margin-top: .5rem;
+    transition: all .5s ease-in-out; }
+  .form__subject {
+    padding: .8rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    height: 10rem;
+    width: 60%;
+    display: block;
+    border: none;
+    /*&__label {
+          font-size: 1rem;
+          margin-left: 3rem;
+          display: block;
+          transition: all .4s ease-in-out;
+        } */ }
+    .form__subject__input {
+      display: block;
+      font-size: 1rem;
+      color: inherit;
+      padding: .8rem 1rem;
+      border: none;
+      margin: 2rem 0 0 2rem;
+      border-bottom: .2rem solid transparent;
+      width: 60%;
+      transition: all .5s ease-in-out; }
+    .form__subject:focus {
+      outline: none;
+      box-shadow: 0 1.5rem 3rem rgba(42, 52, 51, 0.4);
+      border-bottom: 0.2rem solid #d4ecb5; }
+    .form__subject:focus:invalid {
+      border-bottom: 0.2rem solid #f3d915; }
+    .form__subject__input:placeholder-shown + .form__subject__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-3rem); }
 
 footer {
   background-color: #2a3433;

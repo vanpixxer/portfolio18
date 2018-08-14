@@ -1,0 +1,104 @@
+.contact {
+ margin: 4rem;
+
+   .contact__title {
+     border-bottom: .2rem solid $color-canary-yellow;
+     font-size: 1.75rem;
+     color: $color-very-dark-brown;
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+     span {
+       background-color: $color-canary-yellow;
+       padding: .5rem 1rem;
+       display: inline-block;
+     }
+   }
+ }
+
+  .message {
+    background-image: linear-gradient(105deg, rgba($color-light-ash, .95) 0%,
+                                    rgba($color-light-ash, .95)  60%,
+                                    transparent 60% ),
+                                   url(../img/tiles/sage-tiles.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 50rem;
+}
+    .form {
+      font-family: inherit;
+      width: 70%;
+      padding: 5rem;
+      &__group
+
+      &__input {
+        display: block;
+        font-size: 1rem;
+        color: inherit;
+        padding: .8rem 1rem;
+        border: none;
+        margin: 2rem 0 0 2rem;
+        border-bottom: .2rem solid transparent;
+        width: 60%;
+        transition: all .5s ease-in-out;
+
+      &:focus {
+        outline: none;
+        box-shadow: $box-shadow;
+        border-bottom: .3rem solid $color-light-mint;
+         }
+         &:focus:invalid {
+           border-bottom: .2rem solid red;
+         }
+         &::-webkit-input-placeholder {
+           color: $color-very-dark-grey;
+         }
+
+      &__label {
+          font-size: 1rem;
+          margin-left: 3rem;
+          display: block;
+          margin-top: .5rem;
+          transition: all .5s ease-in-out;
+      }
+      &__subject {
+        padding: .8rem 1rem;
+        font-family: inherit;
+        font-size: 1rem;
+        height: 10rem;
+        width: 60%;
+        display: block;
+      //  margin: 2rem 0 0 2rem;
+        border: none;
+
+        &__input {
+          display: block;
+          font-size: 1rem;
+          color: inherit;
+          padding: .8rem 1rem;
+          border: none;
+          margin: 2rem 0 0 2rem;
+          border-bottom: .2rem solid transparent;
+          width: 60%;
+          //transition: all .5s ease-in-out;
+
+        &__label {
+          font-size: 1rem;
+          margin-left: 3rem;
+          display: block;
+          transition: all .4s ease-in-out;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: $box-shadow;
+          border-bottom: .2rem solid $color-light-mint;
+        }
+        &:focus:invalid {
+          border-bottom: .2rem solid $color-canary-yellow;
+        }
+
+      &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-3rem);
+       }
+   }

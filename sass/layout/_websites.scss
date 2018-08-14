@@ -38,7 +38,7 @@
       &-1 {
         background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green);
       }
-      &-2 {
+      &--2 {
         background-image: linear-gradient(to right bottom, $color-mid-blue-green, $color-canary-yellow);
       }
       &-3 {
@@ -81,7 +81,6 @@
     top: 11rem;
     right: 2rem;
     color: $color-light-ash;
-     background-color: rgba($color-very-dark-grey, .7);
    }
    &__heading-span {
      padding: 1rem 1.5rem;
@@ -93,13 +92,13 @@
      }
      &--2 {
         background-image: linear-gradient(to right bottom,
-        rgba($color-mid-blue-green, .8),
+        rgba($color-very-dark-brown, .8),
         rgba($color-canary-yellow, .8));
      }
      &--3 {
         background-image: linear-gradient(to right bottom,
-        rgba($color-very-dark-brown, .8),
-        rgba($color-light-mint, .8));
+        rgba($color-very-dark-grey, .8),
+        rgba($color-mid-blue-green, .8));
      }
    }
     &__details {
@@ -107,29 +106,29 @@
       font-size: 1.2rem;
       margin: 0 auto;
       }
-      &__logo {
+    
+      &__site-name-holder {
         position: absolute;
-        top: 20%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      &__logo-box{
-        background-image: url(../img/logos/rc_logo.gif);
-        background-blend-mode: color;
-        z-index: 90;
+      &__name-box {
+         text-align: center;
+         color: $color-light-ash;
+         margin-bottom: 15rem;
+         z-index: 15;
+         opacity: .6;
+      }
+      &__site-name {
+        font-size: 1.5rem;
       }
     }
 
 
 
 
-
-
-
-
-
-
-    .card--2 {
+    .card {
       perspective: 150rem;
       -moz-perspective: 150rem;
       position: relative;
@@ -170,7 +169,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
 
-         &--2 {
+         &--1 {
            background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green), url(../img/rome.jpg);
          }
 
