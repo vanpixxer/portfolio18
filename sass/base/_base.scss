@@ -7,12 +7,11 @@
   text-decoration: none;
 }
 
-
-
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.9;
   color: $color-very-dark-grey;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }

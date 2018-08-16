@@ -6,16 +6,13 @@
   background-position: top;
 }
 .title__box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include centering;
 }
 .heading__primary {
   display: block;
   color: $color-light-ash;
-  font-size: 2rem;
-  letter-spacing: .5rem;
+  font-size: 1.7rem;
+  letter-spacing: .6rem;
   background-color: rgba($color-very-dark-grey, .6);
   padding: 2.5rem;
   animation: enterFromLeft 2s ease-in-out;

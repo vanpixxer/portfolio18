@@ -17,18 +17,18 @@
  <div class="nav__container  nav__align-center">
    <img src="./img/dc_logo.png" alt="logo" class="logo"/>
    <ul class="nav__menu">
-         <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Websites</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Graphic Art</a></li>
-          <li><a href="#">Contact</a></li>
+         <li><a class="section__link" href="#">Home</a></li>
+          <li><a class="section__link" href="#about">About</a></li>
+          <li><a class="section__link" href="#websites">Websites</a></li>
+            <li><a class="section__link" href="#photos">Photography</a></li>
+          <li><a class="section__link" href="#graphics">Graphic Art</a></li>
+          <li><a class="section__link" href="#contact">Contact</a></li>
    </ul>
  </div><!-- nav__container -->
 </nav>
 
 <!-- HEADER -->
- <header class="header">
+ <header id="home" class="header">
    <div class="title__box">
            <h1 class="heading__primary">
                  <span class="heading__primary--main">darrellchaddock.com</span>
@@ -40,7 +40,7 @@
  <main id="wrapper">
 
    <!-- ABOUT -->
-   <section class="about">
+   <section id="about" class="about">
        <h2 class="about__title" ><span>ABOUT</span></h2>
 
            <p>Hi, and welcome to my website. I put this together myself in order to showcase some of my work in web development, photography, and graphic art. Along with travel, these are my chief interests.</p>
@@ -60,7 +60,7 @@
 
 
 <!-- WEBSITES -->
-<section class="websites">
+<section  id="websites" class="websites">
     <h2 class="websites__title" ><span>WEBSITES</span></h2>
     <div class="card">
          <div class="card__side card__side--front">
@@ -152,7 +152,7 @@
 
 
    <!-- <PHOTO>  GALLERY -->
-   <section class="photo__gallery">
+   <section id="photos" class="photo__gallery">
         <h2 class="photo__gallery--title"><span>PHOTO GALLERY</span></h2>
         <ul class="photo__gallery--img">
               <li><img src="./img/photos/buddha.jpg" alt="Buddha Statue" /></li>
@@ -175,8 +175,14 @@
    </section>
 
 
+   <!-- <GRAPHIC  ART -->
+   <section id="graphics" class="graphics">
+      <h2 class="graphics__title"><span>Graphic Art</span></h2>
+   </section>
+
+
    <!-- CONTACT -->
-   <section class="contact">
+   <section id="contact" class="contact">
       <h2 class="contact__title"><span>Contact</span></h2>
         <div class="row">
             <div class="message">
@@ -191,7 +197,7 @@
                          <textarea class="form__input" placeholder="Subject" id="subject" required></textarea>
                          <label for="subject" class="form__label">Subject</label>
                       </div>
-                           <input type="submit" value="Submit" />
+                           <input type="submit" class="btn__box-submit btn-animated" value="Submit" />
                       </div>
                       </div>
                       </div>
@@ -216,6 +222,6 @@
        </div>
       <span class="footer__copyright">&copy copyright of Darrell Chaddock, Vancouver, BC</span>
  </footer>
-
+       <script src="../js/scripts.js"></script>
     </body>
 </html>

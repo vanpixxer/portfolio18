@@ -12,7 +12,8 @@ body {
   font-size: 1rem;
   line-height: 1.9;
   color: #2a3433;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 .heading__tertiary {
   font-size: 2.25rem;
@@ -121,11 +122,17 @@ nav {
     font-size: 1.5rem;
     padding: 0 1rem;
     pointer: cursor; }
-    nav .nav__menu li a:hover {
+    nav .nav__menu li a:after {
       content: ' ';
       display: block;
-      color: #d4ecb5;
-      font-size: 1.6rem; }
+      height: .2rem;
+      width: 0;
+      background-color: #e9e8e4;
+      opacity: 0;
+      transition: all .5s ease; }
+    nav .nav__menu li a:hover:after {
+      width: 100%;
+      opacity: 1; }
     nav .nav__menu li a li:last-child a {
       padding-right: 0; }
 
@@ -144,8 +151,8 @@ nav {
 .heading__primary {
   display: block;
   color: #e9e8e4;
-  font-size: 2rem;
-  letter-spacing: .5rem;
+  font-size: 1.7rem;
+  letter-spacing: .6rem;
   background-color: rgba(42, 52, 51, 0.6);
   padding: 2.5rem;
   animation: enterFromLeft 2s ease-in-out;
@@ -155,25 +162,26 @@ nav {
   font-size: 1.6rem;
   margin: 4rem; }
   .about .about__title {
-    border-bottom: 0.2rem solid #8cccbc;
+    border-bottom: 0.2rem solid #63796d;
+    color: #e9e8e4;
     font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 2rem; }
     .about .about__title span {
-      background-color: #8cccbc;
+      background-color: #63796d;
       padding: .5rem 1rem;
       display: inline-block; }
 
 .websites {
   margin: 4rem; }
   .websites .websites__title {
-    border-bottom: 0.2rem solid #63796d;
+    border-bottom: 0.2rem solid #8cccbc;
+    color: #2a3433;
     font-size: 1.75rem;
-    color: #e9e8e4;
     margin-top: 1rem;
     margin-bottom: 2rem; }
     .websites .websites__title span {
-      background-color: #63796d;
+      background-color: #8cccbc;
       padding: .5rem 1rem;
       display: inline-block; }
 
@@ -310,12 +318,13 @@ nav {
 .photo__gallery {
   margin: 4rem; }
   .photo__gallery .photo__gallery--title {
-    border-bottom: 0.2rem solid #d4ecb5;
+    border-bottom: 0.2rem solid #2a3433;
+    color: #e9e8e4;
     font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 2rem; }
     .photo__gallery .photo__gallery--title span {
-      background-color: #d4ecb5;
+      background-color: #2a3433;
       padding: .5rem 1rem;
       display: inline-block; }
 
@@ -349,6 +358,19 @@ nav {
 
 .photo__gallery--img li:hover img {
   transform: scale(1.2); }
+
+.graphics {
+  margin: 4rem; }
+  .graphics .graphics__title {
+    border-bottom: 0.2rem solid #f3d915;
+    font-size: 1.75rem;
+    color: #2a3433;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+    .graphics .graphics__title span {
+      background-color: #f3d915;
+      padding: .5rem 1rem;
+      display: inline-block; }
 
 .contact {
   margin: 4rem; }
@@ -455,6 +477,7 @@ textarea {
 
 .contact input[type="submit"]:hover {
   transform: translateY(-0.4rem);
+  transition: all .3s ease-in-out;
   box-shadow: 0 0.5rem 1.5rem rgba(42, 52, 51, 0.6); }
 
 .contact input[type="submit"]::after {
@@ -469,10 +492,12 @@ textarea {
 
 .contact input[type="submit"]:active {
   transform: translateY(-0.2rem);
+  transition: all .5s ease-in-out;
   box-shadow: 0 0.3rem 0.7rem rgba(42, 52, 51, 0.6); }
 
 .btn-animated {
   animation: moveFromBottom .5s ease-in-out .75s;
+  transition: all .5s ease-in-out;
   animation-fill-mode: backwards; }
 
 footer {

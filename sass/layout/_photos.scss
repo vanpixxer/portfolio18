@@ -2,12 +2,13 @@
 .photo__gallery{
   margin: 4rem;
   .photo__gallery--title {
-    border-bottom: .2rem solid $color-light-mint;
+    border-bottom: .2rem solid $color-very-dark-grey;
+    color: $color-light-ash;
     font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
     span {
-      background-color: $color-light-mint;
+      background-color: $color-very-dark-grey;
       padding: .5rem 1rem;
       display: inline-block;
     }

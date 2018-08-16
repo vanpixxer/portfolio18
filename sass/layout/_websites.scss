@@ -1,13 +1,13 @@
 .websites{
   margin: 4rem;
   .websites__title {
-    border-bottom: .2rem solid $color-dark-sage;
+    border-bottom: .2rem solid $color-mid-blue-green;
+    color: $color-very-dark-grey;
     font-size: 1.75rem;
-    color: $color-light-ash;
     margin-top: 1rem;
     margin-bottom: 2rem;
     span {
-      background-color: $color-dark-sage;
+      background-color: $color-mid-blue-green;
       padding: .5rem 1rem;
       display: inline-block;
     }
@@ -106,7 +106,7 @@
       font-size: 1.2rem;
       margin: 0 auto;
       }
-    
+
       &__site-name-holder {
         position: absolute;
         top: 50%;

@@ -1,0 +1,16 @@
+.graphics {
+ margin: 4rem;
+
+   .graphics__title {
+     border-bottom: .2rem solid $color-canary-yellow;
+     font-size: 1.75rem;
+     color: $color-very-dark-grey;
+     margin-top: 1rem;
+     margin-bottom: 2rem;
+     span {
+       background-color: $color-canary-yellow;
+       padding: .5rem 1rem;
+       display: inline-block;
+     }
+   }
+ }

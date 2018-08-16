@@ -38,11 +38,18 @@
     padding: 0 1rem;
     pointer: cursor;
 
-    &:hover {
+    &:after {
       content: ' ';
       display: block;
-      color: $color-light-mint;
-      font-size: 1.6rem;
+      height: .2rem;
+      width: 0;
+      background-color: $color-light-ash;
+      opacity: 0;
+      transition: all .5s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      opacity: 1;
     }
 
     li:last-child a {
