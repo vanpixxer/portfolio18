@@ -38,22 +38,35 @@ const scrollToSection = sectionId  => {
 
 
   // Photo Gallery
-  const onGalleryImageClick = () => {
-    const galleryImageList = document.querySelectorAll(".photo__gallery li");
-    const galleryImages = [...galleryImageList];
-    galleryImages.forEach(image => {
-         image.addEventListener("click", event => {
-             galleryImageOpen(event.target);
-      });
-    });
-  };
-  const galleryImageOpen = image => {
-       const imageSrc = image.getAttribute("src");
-       const openedImage = `<div class='photo__backdrop'>img src='${imageSrc}' alt='' />
-       <span class="photo__backdrop-close">X</span></div>`;
+  function onGalleryImageClick() {
+		var galleryImagesList = document.querySelectorAll(".photo__gallery li");
+	    var galleryImages = Array.prototype.slice.call(galleryImagesList,0);
 
-       document.body.insertAdjacentHTML("beforeend", openedImage);
-   }
+	    galleryImagesList.forEach(function(image) {
+
+	    	image.addEventListener("click", function(event) {
+	            galleryImageOpen(event.target);
+	    	})
+	    })
+	}
+
+	function galleryImageOpen(image) {
+	    var imageSrc = image.getAttribute("src");
+	    var openedImage = '<div class="photo__backdrop"><img src="' + imageSrc + '" alt="" /><span class="photo__backdrop-close">x</span></div>';
+
+	    document.body.insertAdjacentHTML("beforeend", openedImage);
+	    galleryImageClose();
+	}
+
+	function galleryImageClose() {
+	    var closeButton = document.querySelector(".photo__backdrop-close");
+
+	    closeButton.addEventListener("click", function() {
+	    	var backdrop = document.querySelector(".photo__backdrop");
+	    	backdrop.remove();
+	    })
+	}
+
   onNavItemClick();
   onGalleryImageClick();
 }) ();

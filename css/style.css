@@ -359,6 +359,34 @@ nav {
 .photo__gallery--img li:hover img {
   transform: scale(1.2); }
 
+.photo__backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(42, 52, 51, 0.8);
+  z-index: 9999; }
+  .photo__backdrop img {
+    max-width: 90vw; }
+
+.photo__backdrop-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 2rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  font-size: 3rem;
+  color: #e9e8e4;
+  border: solid 0.2rem #e9e8e4;
+  border-radius: 100%;
+  cursor: pointer; }
+
 .graphics {
   margin: 4rem; }
   .graphics .graphics__title {
