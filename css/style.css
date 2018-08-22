@@ -93,13 +93,13 @@ btn:active {
 nav {
   position: fixed;
   z-index: 100;
-  padding: 1rem 0;
+  padding: .3rem 0;
   width: 100%;
   background-color: rgba(99, 121, 109, 0.95); }
   nav .nav__align-center {
     align-items: center; }
   nav .logo {
-    width: 10rem;
+    width: 12rem;
     justify-content: center;
     align-items: center;
     padding-left: 1rem; }
@@ -109,7 +109,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    max-width: 120rem;
+    max-width: 100rem;
     box-sizing: border-box; }
   nav ul {
     margin: 0;
@@ -136,6 +136,63 @@ nav {
     nav .nav__menu li a li:last-child a {
       padding-right: 0; }
 
+@media all and (max-width: 1020px) {
+  nav .logo {
+    width: 10rem; }
+  nav .nav__menu li a {
+    font-size: 1.25rem;
+    padding: 0 .75rem; } }
+
+@media all and (max-width: 800px) {
+  nav {
+    position: absolute;
+    background: none; }
+  .nav__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: rgba(99, 121, 109, 0.9); }
+    .nav__menu li {
+      padding: 0 5rem; }
+    .nav__menu a {
+      display: block;
+      padding: .4rem 0;
+      color: #e9e8e4;
+      font-size: 1.1rem;
+      border-bottom: solid 0.1rem rgba(233, 232, 228, 0.7); }
+    .nav__menu li:last-child a {
+      border-bottom: none; } }
+
+/*  @media all and (max-width: 840px) {
+  nav {
+    position: absolute;
+    .nav__fixed {
+      background: none;
+    }
+}
+  nav .logo {
+    width: 8rem;
+  }
+   .nav__menu {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     max-height: 0;
+     overflow: hidden;
+     background-color: rgba($color-dark-sage, .9);
+     transition: max-height .5s ease-in-out;
+
+     li a {
+       display: block;
+       color: $color-light-ash;
+       padding: .4rem 0;
+       font-size: 1.25rem;
+       text-align: center;
+       border-bottom: .1rem solid rgba($color-light-ash, .8);
+     }
+   }
+ }  */
 .header {
   height: 100vh;
   background-image: url(../img/hero.jpg);
@@ -149,17 +206,56 @@ nav {
   transform: translate(-50%, -50%); }
 
 .heading__primary {
-  display: block;
   color: #e9e8e4;
-  font-size: 1.7rem;
-  letter-spacing: .6rem;
   background-color: rgba(42, 52, 51, 0.6);
   padding: 2.5rem;
   animation: enterFromLeft 2s ease-in-out;
   backface-visibility: hidden; }
+  .heading__primary--main {
+    display: block;
+    font-size: 4rem;
+    letter-spacing: .9rem; }
+  .heading__primary--sub {
+    display: block;
+    font-size: 2.15rem;
+    letter-spacing: .2rem; }
+
+@media all and (max-width: 1020px) {
+  .heading__primary {
+    padding: 2rem; }
+    .heading__primary--main {
+      font-size: 3rem; }
+    .heading__primary--sub {
+      font-size: 1.7rem; } }
+
+@media all and (max-width: 840px) {
+  .title__box {
+    top: 70%; }
+  .heading__primary {
+    background-color: transparent; }
+    .heading__primary--main {
+      font-size: 2.25rem;
+      letter-spacing: .7rem; }
+    .heading__primary--sub {
+      opacity: 0;
+      visibility: hidden; } }
+
+@media all and (max-width: 600px) {
+  .heading__primary {
+    padding: .75rem; }
+    .heading__primary--main {
+      font-size: 1.8rem;
+      letter-spacing: .3rem; } }
+
+@media all and (max-width: 400px) {
+  .heading__primary {
+    padding: .5rem; }
+    .heading__primary--main {
+      font-size: 1.3rem;
+      letter-spacing: .3rem; } }
 
 .about {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 4rem; }
   .about .about__title {
     border-bottom: 0.2rem solid #63796d;
@@ -506,11 +602,13 @@ textarea {
 .contact input[type="submit"]:hover {
   transform: translateY(-0.4rem);
   transition: all .3s ease-in-out;
+  opacity: .8;
   box-shadow: 0 0.5rem 1.5rem rgba(42, 52, 51, 0.6); }
 
 .contact input[type="submit"]::after {
   content: "";
   display: inline-block;
+  opacity: .8;
   z-index: -1;
   transition: all .5s ease-in-out; }
 
@@ -568,3 +666,13 @@ footer {
   display: flex;
   justify-content: center;
   bottom: 1rem; }
+
+@media all and (max-width: 840px) {
+  footer .logo {
+    width: 4rem; }
+  footer li {
+    margin-left: .5rem; }
+  footer i {
+    font-size: 1.75rem; }
+  .footer__copyright {
+    font-size: .8rem; } }

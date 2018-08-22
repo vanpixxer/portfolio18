@@ -9,12 +9,66 @@
   @include centering;
 }
 .heading__primary {
-  display: block;
   color: $color-light-ash;
-  font-size: 1.7rem;
-  letter-spacing: .6rem;
   background-color: rgba($color-very-dark-grey, .6);
   padding: 2.5rem;
   animation: enterFromLeft 2s ease-in-out;
   backface-visibility: hidden;
+  &--main {
+    display: block;
+    font-size: 4rem;
+    letter-spacing: .9rem;
+  }
+  &--sub {
+    display: block;
+    font-size: 2.15rem;
+    letter-spacing: .2rem;
+  }
+}
+
+@media all and (max-width: 1020px) {
+  .heading__primary {
+    padding: 2rem;
+    &--main {
+      font-size: 3rem;
+    }
+    &--sub {
+      font-size: 1.7rem;
+    }
+  }
+}
+@media all and (max-width: 840px) {
+  .title__box {
+    top: 70%;
+  }
+  .heading__primary {
+    background-color: transparent;
+
+    &--main {
+    font-size: 2.25rem;
+    letter-spacing: .7rem;
+     }
+    &--sub {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  .heading__primary {
+    padding: .75rem;
+    &--main {
+    font-size: 1.8rem;
+    letter-spacing: .3rem;
+     }
+  }
+}
+@media all and (max-width: 400px) {
+  .heading__primary {
+    padding: .5rem;
+    &--main {
+      font-size: 1.3rem;
+      letter-spacing: .3rem;
+    }
+  }
 }
