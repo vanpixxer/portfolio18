@@ -1,18 +1,9 @@
 .websites{
-  margin: 4rem;
-  .websites__title {
-    border-bottom: .2rem solid $color-mid-blue-green;
-    color: $color-very-dark-grey;
-    font-size: 1.75rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    span {
-      background-color: $color-mid-blue-green;
-      padding: .5rem 1rem;
-      display: inline-block;
-    }
-  }
+  margin: 2rem;
 }
+  .websites__title {
+    @include section__title;
+  }
 
 // functionality
 .card {

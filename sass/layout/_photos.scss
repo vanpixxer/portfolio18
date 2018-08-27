@@ -1,19 +1,10 @@
 // PHOTO GALLERY
 .photo__gallery{
-  margin: 4rem;
-  .photo__gallery--title {
-    border-bottom: .2rem solid $color-very-dark-grey;
-    color: $color-light-ash;
-    font-size: 1.75rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    span {
-      background-color: $color-very-dark-grey;
-      padding: .5rem 1rem;
-      display: inline-block;
-    }
-  }
+  margin: 2rem;
 }
+  .photo__gallery--title {
+    @include section__title;
+  }
 .photo__gallery--img {
   display: flex;
   flex-wrap: wrap;

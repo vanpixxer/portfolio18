@@ -83,13 +83,21 @@ const scrollToSection = sectionId  => {
   }
 
 
+  // GRAPHIC ART GALLERY
+
+
+
+
+
+
+
 
   window.addEventListener("resize", function() {
 		reorderResponsiveMenu();
 	});
 
   reorderResponsiveMenu();
-//  mobileMenuToggle();
   onNavItemClick();
-  //onGalleryImageClick();
+  onGalleryImageClick();
+//  onGraphicImageClick();
 }) ();

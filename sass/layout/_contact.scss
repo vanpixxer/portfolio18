@@ -1,19 +1,10 @@
 .contact {
- margin: 4rem;
-
+ margin: 2rem;
+}
    .contact__title {
-     border-bottom: .2rem solid $color-sea-green;
-     font-size: 1.75rem;
-     color: $color-very-dark-grey;
-     margin-top: 1rem;
-     margin-bottom: 2rem;
-     span {
-       background-color: $color-sea-green;
-       padding: .5rem 1rem;
-       display: inline-block;
-     }
+     @include section__title;
    }
- }
+
 
   .message {
     background-image: linear-gradient(105deg, rgba($color-light-ash, .95) 0%,
@@ -21,9 +12,8 @@
                                     transparent 60% ),
                                    url(../img/tiles/sage-tiles.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     box-shadow: $box-shadow;
-    height: 50rem;
 }
     .form {
       font-family: inherit;

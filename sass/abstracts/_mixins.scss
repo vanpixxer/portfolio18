@@ -4,3 +4,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin section__title {
+  border-bottom: .2rem solid $color-dark-sage;
+  color: $color-light-ash;
+  font-size: 1.75rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  span {
+    background-color: $color-dark-sage;
+    padding: .5rem 1rem;
+    display: inline-block;
+  }
+}
