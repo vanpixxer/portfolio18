@@ -1,8 +1,21 @@
+#websites {
+  margin-top: 5rem;
+  grid-area: sites;
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  justify-content: space-around;
+}
+
 .websites{
-  margin: 2rem;
+  margin: 0;
 }
   .websites__title {
     @include section__title;
+  }
+
+  .cards__intro {
+    font-size: 1.25rem;
   }
 
 // functionality
@@ -10,11 +23,10 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem;
-  margin: 5rem 0;
+  margin: 10rem 1rem;
   &__side {
     height: 50rem;
-    width: 28rem;
+    width: 26rem;
     transition: all .7s ease;
     position: absolute;
     top: 0;
@@ -53,14 +65,17 @@
 
 
      &--1 {
+
        background-image: linear-gradient(to right bottom, $color-dark-sage, $color-mid-blue-green), url(../img/buddhas.jpg);
      }
 
      &--2 {
+
        background-image: linear-gradient(to right bottom, $color-mid-blue-green, $color-canary-yellow), url(../img/rome.jpg);
      }
 
      &--3 {
+
        background-image: linear-gradient(to right bottom, $color-very-dark-grey, $color-sea-green), url(../img/neon.jpg);
      }
    }
@@ -126,7 +141,7 @@
       height: 50rem;
       &__side--2 {
         height: 50rem;
-        width: 28rem;
+        width: 24rem;
         transition: all .7s ease;
         position: absolute;
         top: 0;
@@ -194,3 +209,37 @@
           margin: 0 auto;
           }
         }
+
+        .card1 {
+      display: flex;
+      flex-grow: 1;
+      margin-left: -10rem;
+        }
+        .card2 {
+       display: flex;
+       flex-grow: 1;
+        }
+        .card3 {
+        display: flex;
+        flex-grow: 1;
+        }
+@media all and (max-width: 82.5rem) {
+   #websites {
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+   }
+   .card {
+     width: 27rem;
+     margin-top: 0;
+   }
+   .card1 {
+     margin-left: 0;
+     margin-top: 4rem;
+   }
+}
+@media all and (max-width: 23rem) {
+  .card {
+    max-width: 100%;
+  }
+}

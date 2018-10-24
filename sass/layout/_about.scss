@@ -1,7 +1,11 @@
 // ABOUT
+#about {
+  grid-area: about;
+}
 .about{
-  font-size: 1.3rem;
-  margin: 4rem;
+  font-size: 1.25rem;
+  padding-left: .75rem;
+  margin: 0;
 }
   .about__title {
     @include section__title;

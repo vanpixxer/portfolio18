@@ -15,3 +15,49 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  @include respond(phone) {
+    font-size: .7rem;
+  }
+  @include respond(tablet) {
+    font-size: .9rem;
+  }
+  @include respond(desktop) {
+    font-size: 1rem;
+  }
+}
+
+#wrapper {
+  max-width: 87.5rem;
+  margin: 0 auto;
+  border: .1rem solid $color-light-ash;
+  display: grid;
+  grid-gap: .8rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "about about sidebar"
+                                    "sites sites sites"
+                                    "photos photos photos"
+                                    "graphics graphics graphics"
+                                    "contact contact contact";
+}
+@media all and (max-width: 50em) {
+    #wrapper {
+      margin: 0;
+      padding: .5rem;
+       grid-template-columns: 1fr;
+       grid-template-areas: "about"
+                                         "sidebar"
+                                         "sites"
+                                         "sites"
+                                         "sites"
+                                         "photos"
+                                         "graphics"
+                                         "contact";
+    }
+}

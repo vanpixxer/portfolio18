@@ -38,7 +38,7 @@
  </header>
 
  <!-- MAIN-CONTENT -->
- <main id="wrapper">
+ <div id="wrapper">
 
    <!-- ABOUT -->
    <section id="about" class="about">
@@ -56,18 +56,24 @@
          <p>I actually have 3 other websites currently on line. There are links to those other sites in the next section. Keep scrolling or use the navigation link. I encourage you to check out my other websites.</p>
          <p>If you would like to share feedback about any of my work online just use the contact form. I'd love to hear from you.</p>
          <p>Thanks for taking the time to visit.</p>
-           <img src="./img/me3.jpg" alt="photo of Darrell Chaddock" class="myself" />
    </section><!-- about -->
+   <aside id="sidebar">
+       <img src="./img/me3.jpg" alt="photo of Darrell Chaddock" />
+    </aside>
 
 
 <!-- WEBSITES -->
+
 <section  id="websites" class="websites">
-    <h2 class="websites__title" ><span>WEBSITES</span></h2>
-    <div class="card">
+  <h2 class="websites__title" ><span>MY OTHER WEBSITES</span></h2>
+  <p class=cards__intro>On the reverse side of each of the following 3 cards is a link to each of my other websites. On a desktop or laptop
+  computer you only need to <strong>hover</strong> your mouse over the front of each card to make it turn over. On a touch device simply <strong>tap</strong> the cards to
+make them turn over.</p>
+    <div class="card card1">
          <div class="card__side card__side--front">
              <div class="card__picture card__picture--1">
-                  &nbsp;
-             </div>
+
+             </div><!--card__picture cared__picture -->
              <h3 class="card__heading">
                   <span class="card__heading-span  card__heading-span--1">Roving Camera</span>
              </h3>
@@ -76,23 +82,23 @@
                    <p>You'll be able to read about my travel adventures over the past 3 decades
                      and view a whole pile of photos I took in my journeys.</p>
                    <p>If you enjoy travel I think you might really enjoy a visit to this site.</p>
-             </div>
-         </div>
+             </div><!-- card__details -->
+         </div><!-- card__side card__side--front -->
          <div class="card__side card__side--back card__side--back-1">
               <div class="card__site-name-holder">
                    <div class="card__name-box">
                        <img src="../img/logos/rc_logo.gif" alt="logo for roving-camera.com" />
-                   </div>
-              </div>
+                   </div><!-- card__name-box -->
+              </div><!-- card__site-name-holder -->
                 <div class="btn-box">
                     <a href="https://roving-camera.com" class="btn btn-ash btn-animated">Link To Site</a>
                 </div><!--btn-box -->
-         </div>
-    </div><!-- card -->
+         </div><!-- card__side card__side--back card__side--back-1 -->
+    </div>
 
 
 <!-- SECOND CARD -->
-    <div class="card">
+    <div class="card card2">
          <div class="card__side card__side--front">
              <div class="card__picture card__picture--2">
                &nbsp;
@@ -122,7 +128,7 @@
 
 
 <!-- THIRD CARD -->
-    <div class="card">
+    <div class="card card3">
          <div class="card__side card__side--front">
              <div class="card__picture card__picture--3">
                &nbsp;
@@ -152,7 +158,7 @@
 
 
 
-   <!-- <PHOTO>  GALLERY -->
+   <!-- PHOTO GALLERY -->
    <section id="photos" class="photo__gallery">
         <h2 class="photo__gallery--title"><span>PHOTO GALLERY</span></h2>
         <ul class="photo__gallery--img">
@@ -176,7 +182,7 @@
    </section>
 
 
-   <!-- <GRAPHIC  ART  GALLERY-->
+   <!-- GRAPHIC  ART  GALLERY-->
    <section id="graphics" class="graphics__gallery">
       <h2 class="graphics__gallery--title"><span>GRAPHIC ART</span></h2>
          <ul class="graphics__gallery--img">
@@ -206,7 +212,7 @@
         <div class="row">
             <div class="message">
                 <div class="message__form">
-                   <form method="post" action=""http://us.1.p9.webhosting.yahoo.com/forms?login=darrellchaddock" class="form">
+                   <form method="post" action="http://us.1.p9.webhosting.yahoo.com/forms?login=darrellchaddock" class="form">
                     <h3 class="heading__tertiary">Contact Me<h3>
                       <div class="form__group">
                          <input type="text" class="form__input" placeholder="Your Name" id="name" required>
@@ -226,12 +232,12 @@
        </div>
    </section>
 
- </main>
+ </div>
 
  <!-- FOOTER -->
  <footer>
        <div class="footer__container footer__align-center">
-         <img src="./img/dc_logo.png" alt="logo" class="logo"/>
+         <a href="#"><img src="./img/dc_logo.png" alt="logo" class="logo"/></a>
            <span class="footer__logo"></span>
                <ul class="footer__social-icons">
                     <li><a href="https://twitter.com/DarrellChaddock"><i class="fab fa-twitter"></i></a></li>

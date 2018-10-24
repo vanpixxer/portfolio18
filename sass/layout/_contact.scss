@@ -1,3 +1,7 @@
+#contact {
+  grid-area: contact;
+}
+
 .contact {
  margin: 2rem;
 }
@@ -142,4 +146,24 @@
        animation: moveFromBottom .5s ease-in-out .75s;
        transition: all .5s ease-in-out;
        animation-fill-mode: backwards;
+     }
+
+     @media all and (max-width: 50rem){
+         .message {
+        background-image: linear-gradient(to right, rgba($color-light-ash, .9) 0%,
+         rgba($color-light-ash, .9) 100%),
+         url(../img/tiles/sage-tiles.jpg);
+       }
+       .heading__tertiary {
+         font-size: 1.5rem;
+         margin-bottom: 2rem;
+       }
+       .form {
+         width: auto;
+         &__input {
+           width: 90%;
+           font-size: 1rem;
+           margin: 0 auto;
+         }
+       }
      }

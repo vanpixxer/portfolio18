@@ -8,7 +8,7 @@
 @mixin section__title {
   border-bottom: .2rem solid $color-dark-sage;
   color: $color-light-ash;
-  font-size: 1.75rem;
+  font-size: 1.2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   span {
@@ -17,3 +17,24 @@
     display: inline-block;
   }
 }
+
+// MEDIA QUERY:   MANAGER
+/*
+0 - 800px:           Phone
+801 - 1200px      Tablet
+1400 - ~ px          Desktop
+
+1em = 16px
+*/
+
+  @mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 50em) { @content};   //800px
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 75em) { @content};  //1200px
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 87.5em) { @content};   //1400px
+    }
+  }
