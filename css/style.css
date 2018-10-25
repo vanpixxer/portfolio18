@@ -47,7 +47,7 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "about about sidebar" "sites sites sites" "photos photos photos" "graphics graphics graphics" "contact contact contact"; }
 
-@media all and (max-width: 50em) {
+@media all and (max-width: 50rem) {
   #wrapper {
     margin: 0;
     padding: .5rem;
@@ -325,11 +325,7 @@ nav {
 
 #websites {
   margin-top: 5rem;
-  grid-area: sites;
-  display: flex;
-  flex-direction: row;
-  overflow-y: auto;
-  justify-content: space-around; }
+  grid-area: sites; }
 
 .websites {
   margin: 0; }
@@ -346,7 +342,9 @@ nav {
     display: inline-block; }
 
 .cards__intro {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  max-width: 90%;
+  margin: 0 auto; }
 
 .card {
   perspective: 150rem;
@@ -505,6 +503,15 @@ nav {
 @media all and (max-width: 23rem) {
   .card {
     max-width: 100%; } }
+
+@media all and (min-width: 83rem) {
+  #card__holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 12rem; }
+  .card {
+    margin-top: 3rem; } }
 
 #photos {
   grid-area: photos; }

@@ -1,10 +1,6 @@
 #websites {
   margin-top: 5rem;
   grid-area: sites;
-  display: flex;
-  flex-direction: row;
-  overflow-y: auto;
-  justify-content: space-around;
 }
 
 .websites{
@@ -16,6 +12,8 @@
 
   .cards__intro {
     font-size: 1.25rem;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
 // functionality
@@ -223,6 +221,7 @@
         display: flex;
         flex-grow: 1;
         }
+
 @media all and (max-width: 82.5rem) {
    #websites {
      display:flex;
@@ -238,8 +237,22 @@
      margin-top: 4rem;
    }
 }
+
+
 @media all and (max-width: 23rem) {
   .card {
     max-width: 100%;
+  }
+}
+
+@media all and (min-width: 83rem) {
+  #card__holder {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+    margin-left: 12rem;
+  }
+  .card {
+    margin-top: 3rem;
   }
 }
