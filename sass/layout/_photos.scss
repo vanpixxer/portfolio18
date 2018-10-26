@@ -74,3 +74,9 @@
   border-radius: 100%;
   cursor: pointer;
 }
+
+@media all and (max-width: 37.5rem) {
+    .photo__gallery--img li {
+      width: 50%;
+    }
+}

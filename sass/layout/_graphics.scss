@@ -55,11 +55,12 @@
      height: 100%;
      background-color: rgba($color-very-dark-grey, .9);
      z-index: 9999;
+     }
 
      img {
        max-width: 90vw;
      }
-   }
+   
     .graphics__backdrop-close {
      position: absolute;
      display: flex;
@@ -74,4 +75,10 @@
      border: solid .2rem $color-light-ash;
      border-radius: 100%;
      cursor: pointer;
+   }
+
+   @media all and (max-width: 37.5rem) {
+       .graphics__gallery--img li {
+         width: 50%;
+       }
    }

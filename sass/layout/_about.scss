@@ -6,6 +6,7 @@
   font-size: 1.25rem;
   padding-left: .75rem;
   margin: 0;
+  max-width: 90%;
 }
   .about__title {
     @include section__title;

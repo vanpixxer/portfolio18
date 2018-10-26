@@ -33,6 +33,11 @@ html {
   }
 }
 
+::selection {
+  background-color: $color-dark-sage;
+  color:$color-light-ash;
+}
+
 #wrapper {
   max-width: 87.5rem;
   margin: 0 auto;
@@ -59,5 +64,6 @@ html {
                                          "photos"
                                          "graphics"
                                          "contact";
+
     }
-} 
+}
